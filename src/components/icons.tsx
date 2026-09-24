@@ -221,3 +221,63 @@ export function DangerIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+function MonogramIcon({
+  className,
+  label,
+}: {
+  className?: string;
+  label: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="22"
+        height="22"
+        rx="5"
+        className="fill-zinc-900 dark:fill-zinc-100"
+        opacity="0.1"
+      />
+      <text
+        x="12"
+        y="15.5"
+        textAnchor="middle"
+        fontSize="9"
+        fontWeight="700"
+        className="fill-zinc-900 dark:fill-zinc-100"
+      >
+        {label}
+      </text>
+    </svg>
+  );
+}
+
+export function FastApiIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="FA" />;
+}
+
+export function LangChainIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="LC" />;
+}
+
+export function LlamaIndexIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="LI" />;
+}
+
+export function MilvusIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="MV" />;
+}
+
+export function JiraIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="JR" />;
+}
+
+export function PytestIcon({ className }: { className?: string }) {
+  return <MonogramIcon className={className} label="PT" />;
+}
