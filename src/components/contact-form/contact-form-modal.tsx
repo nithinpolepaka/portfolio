@@ -9,6 +9,7 @@ import ContactForm, {
 import ContactMailToast, {
   type MailSentToastState,
 } from "@/components/contact-form/contact-mail-toast";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export interface ContactFormModelProps {
   showModal: boolean;
@@ -29,33 +30,25 @@ export default function ContactFormModal({
   const handleSubmit = async (values: ContactFormValues) => {
     setIsSendingMail(true);
     try {
-      const response = await fetch("/api/sendmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+      const subject = `${values.subject} (from ${values.name})`;
+      const body = `${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`;
+      const mailtoHref = `mailto:${siteMetadata.email}?subject=${encodeURIComponent(
+        subject,
+      )}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoHref;
+
+      setToastState({
+        type: "success",
+        value: true,
+        message: "Opening your email client...",
       });
-      if (response.ok) {
-        setToastState({
-          type: "success",
-          value: true,
-          message: "Successfully sent email",
-        });
-        setShowModal(false);
-      } else {
-        setToastState({
-          type: response.status === 429 ? "warning" : "failure",
-          value: true,
-          message:
-            response.status === 429
-              ? "Rate Limiter: Only 5 email per hour"
-              : "Oop! Unable to send email",
-        });
-      }
+      setShowModal(false);
     } catch {
       setToastState({
         type: "failure",
         value: true,
-        message: "Oop! Unable to send email",
+        message: "Oop! Unable to open email client",
       });
     }
     setIsSendingMail(false);
