@@ -10,18 +10,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About Amit Chauhan | Software Developer"
-        description="Learn more about Amit Chauhan, a dedicated Software Developer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
+        title="About Nithin Emmanuel | Python Developer | GenAI Engineer"
+        description="Learn more about Nithin Emmanuel, a Python Developer specializing in GenAI and LLM applications. Discover the journey, skills, and experience building Retrieval-Augmented Generation systems."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Amit Chauhan - Software Developer",
+          title: "Learn About Nithin Emmanuel - Python Developer | GenAI Engineer",
           description:
-            "Dive into the story of Amit Chauhan, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
+            "Dive into the story of Nithin Emmanuel, a Python Developer. Uncover the experience, skills, and passion for building GenAI-powered applications.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Nithin Emmanuel - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -34,7 +34,7 @@ export default function About() {
           {
             property: "keywords",
             content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              "Python Developer portfolio, GenAI Engineer, LLM Applications, FastAPI, LangChain, LlamaIndex, Milvus, RAG, Professional Journey, Skills",
           },
         ]}
       />
