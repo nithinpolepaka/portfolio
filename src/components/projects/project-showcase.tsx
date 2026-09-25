@@ -8,6 +8,7 @@ import { ArrowTopRight } from "@/components/icons";
 import ProjectShowcaseList, {
   type ProjectShowcaseListItem,
 } from "@/components/projects/project-showcase-list";
+import { withBasePath } from "@/utility/basePath";
 
 const generateImageData = (proj: ProjectShowcaseListItem[]) => {
   return proj.map((p) => p.image);
@@ -52,7 +53,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
               className="absolute right-0 top-0 -z-50"
             >
               <Image
-                src={images[currentImage].LIGHT}
+                src={withBasePath(images[currentImage].LIGHT)}
                 unoptimized
                 width={100}
                 height={100}
@@ -61,7 +62,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
               />
               {images[currentImage].DARK !== undefined && (
                 <Image
-                  src={images[currentImage].DARK!}
+                  src={withBasePath(images[currentImage].DARK!)}
                   unoptimized
                   width={100}
                   height={100}
