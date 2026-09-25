@@ -4,6 +4,7 @@ import { AnimatePresence, AnimationProps, motion, wrap } from "framer-motion";
 import { BiSolidLeftArrow } from "react-icons/bi";
 
 import { classNames } from "@/utility/classNames";
+import { withBasePath } from "@/utility/basePath";
 
 const variant: AnimationProps["variants"] = {
   enter: (direction: number) => {
@@ -53,7 +54,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           loading="lazy"
           className="h-full w-full bg-cover"
           style={{ aspectRatio }}
-          src={images[imageIndex]}
+          src={withBasePath(images[imageIndex])}
           custom={direction}
           variants={variant}
           initial="enter"
