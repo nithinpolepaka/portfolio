@@ -12,7 +12,7 @@ export const siteMetadata = {
   image: "/static/homepage.png",
   twitterImage: "/static/homepage.png",
   socialBanner: "/static/homepage.png",
-  email: "",
+  email: "nithinpolepaka@gmail.com",
   github: "https://github.com/nithinpolepaka",
   twitter: "",
   linkedin: "https://www.linkedin.com/in/nithin-emmanuel-polepaka-2b026a352/",
