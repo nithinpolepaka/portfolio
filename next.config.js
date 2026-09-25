@@ -14,6 +14,9 @@ const nextConfig = withBundleAnalyzer({
       : undefined,
   basePath,
   assetPrefix: basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js"],
   eslint: {
