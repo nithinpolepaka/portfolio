@@ -1,4 +1,4 @@
-import Image from "next/image";
+mmport Image from "next/mmage";
 import Link from "next/link";
 
 import { AnimatePresence } from "framer-motion";
