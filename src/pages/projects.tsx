@@ -8,18 +8,18 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects by Amit Chauhan - Software Developer Portfolio"
-        description="Explore a collection of projects by Amit Chauhan, a seasoned Software Developer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
+        title="Projects by Nithin Emmanuel - Python Developer Portfolio"
+        description="Explore projects by Nithin Emmanuel, a Python Developer building GenAI and LLM-powered applications. From RAG pipelines to Text2SQL systems, discover the depth of the work."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Discover Projects by Amit Chauhan - Software Developer",
+          title: "Discover Projects by Nithin Emmanuel - Python Developer",
           description:
-            "Explore a showcase of projects crafted by Amit Chauhan, a Software Developer. Witness the fusion of creativity and technology in web development.",
+            "Explore a showcase of projects crafted by Nithin Emmanuel, a Python Developer. Witness the fusion of GenAI, LLMs, and backend engineering.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Nithin Emmanuel - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -32,7 +32,7 @@ export default function Projects() {
           {
             property: "keywords",
             content:
-              "Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              "Projects, Nithin Emmanuel Portfolio, Python Developer, GenAI Engineer, FastAPI, LangChain, LlamaIndex, Milvus, RAG, LLM Applications",
           },
         ]}
       />
@@ -53,8 +53,8 @@ export default function Projects() {
           </div>
           <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
             <span className="text-xl font-bold md:text-2xl">
-              I am currently building new projects and learning backend
-              development to expand my skill set beyond frontend.
+              I am currently building new GenAI and LLM-powered projects to
+              expand my skill set even further.
             </span>
             <p className="mt-10 text-base md:text-xl">
               Visit my github to see some of the latest projects{" "}
