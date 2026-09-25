@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
 import heroProfileImg from "@/public/images/heroProfile.jpg";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
@@ -45,7 +46,10 @@ export default function AboutHero() {
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
               Explore my latest{" "}
-              <Link href="/projects" className="underline underline-offset-4">
+              <Link
+                href={siteMetadata.github}
+                className="underline underline-offset-4"
+              >
                 <span className="text-accent">projects</span>
               </Link>{" "}
               showcasing my work in Python, FastAPI, LangChain, LlamaIndex and
