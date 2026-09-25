@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Amit Chauhan | Software Developer"
-        description="Explore the professional portfolio of Amit Chauhan, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title="Nithin Emmanuel | Python Developer | GenAI Engineer"
+        description="Explore the professional portfolio of Nithin Emmanuel, a Python Developer specializing in GenAI and LLM applications. Discover projects built with FastAPI, LangChain, LlamaIndex, and Milvus."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Amit Chauhan - Software Developer",
+          title: "Nithin Emmanuel - Python Developer | GenAI Engineer",
           description:
-            "Dive into the world of web development with Amit Chauhan. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            "Dive into the work of Nithin Emmanuel, a Python Developer building GenAI and LLM-powered applications with FastAPI, LangChain, and LlamaIndex.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Nithin Emmanuel - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -37,7 +37,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Python Developer, GenAI Engineer, LLM Applications, FastAPI, LangChain, LlamaIndex, Milvus, RAG, Text2SQL, Portfolio",
           },
         ]}
       />
