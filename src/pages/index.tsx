@@ -1,4 +1,4 @@
-mmport Head from "next/head";
+import Head from "next/head";
 
 import { NextSeo } from "next-seo";
 
